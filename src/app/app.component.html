@@ -1,0 +1,25 @@
+<app-header style="overflow: hidden" [drawer]="drawerref"></app-header>
+
+<!-- <div id="main"> -->
+
+<!-- <mat-drawer-container class="example-container" autosize>
+  <app-sidebar *ngIf="sidebarVisible"></app-sidebar>
+  <div class="example-sidenav-content">
+    <button type="button" mat-button (click)="toggle()">Toggle sidenav</button>
+  </div>
+
+</mat-drawer-container> -->
+
+<!-- </div> -->
+
+<mat-drawer-container
+  class="example-container"
+  autosize
+  style="background-color: #d4d4d4"
+>
+  <mat-drawer #drawerref class="example-sidenav-content" mode="side">
+    <app-sidebar [drawer]="drawerref"></app-sidebar>
+  </mat-drawer>
+
+  <app-dashbord class="dashbord"></app-dashbord>
+</mat-drawer-container>

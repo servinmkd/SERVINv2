@@ -1,0 +1,103 @@
+<div class="container_browser" >
+  <button
+    
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+    >
+    <mat-icon (click)="scrollLeft()" >keyboard_arrow_left</mat-icon>
+    </button>
+  <div class="horizontal-scroll-container" #scrollContainer>
+    <div *ngFor="let number of numbers" class="box-exp" >
+      <img
+        src="assets/download.png"
+        class="log-image"
+        alt="Image Description"
+      />
+    </div>
+  </div>
+  <button
+    
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+    >
+      <mat-icon (click)="scrollRight()">keyboard_arrow_right</mat-icon>
+    </button>
+</div>
+<div class="container-product ">
+  <h1 style="font-weight: bold;">Kerala - Malappuram Offers</h1>
+
+  <div class="grid-container " style="background-color: white;">
+
+     
+  
+  <div class="card " *ngFor="let number of numbers" style="margin: 8px;" >
+   
+   
+    <img
+    src="assets/browsers/1.png"
+    class="post-image"
+    alt="Image Description"
+  />
+  <div >
+
+    <h2 class="client-name">Lulu hypermarket</h2>
+    <p class="client-dis">Friday offer</p>
+  </div> 
+
+  </div>
+
+
+
+
+   
+  </div>
+  
+ 
+ 
+</div>
+
+
+
+
+<!-- 
+<mat-grid-list cols="6">
+  <mat-grid-tile>
+    <div class="brow-container">
+      <div style="height: 65%">
+        <img
+          src="assets/browsers/1.png"
+          class="brow-image"
+          alt="Image Description"
+        />
+
+        <p>afygiAFWr</p>
+      </div>
+    </div>
+  </mat-grid-tile>
+
+  <mat-grid-tile
+    ><div style="background-color: aqua; height: 250px; width: 150px"></div
+  ></mat-grid-tile>
+
+  <mat-grid-tile>3</mat-grid-tile>
+  <mat-grid-tile
+    ><div style="background-color: aqua; height: 250px; width: 150px"></div
+  ></mat-grid-tile>
+  <mat-grid-tile
+    ><div style="background-color: aqua; height: 250px; width: 150px"></div
+  ></mat-grid-tile>
+  <mat-grid-tile
+    ><div style="background-color: aqua; height: 250px; width: 150px"></div
+  ></mat-grid-tile>
+  <mat-grid-tile
+    ><div style="background-color: aqua; height: 250px; width: 150px"></div
+  ></mat-grid-tile>
+  <mat-grid-tile
+    ><div style="background-color: aqua; height: 250px; width: 150px"></div
+  ></mat-grid-tile>
+  <mat-grid-tile
+    ><div style="background-color: aqua; height: 250px; width: 150px"></div
+  ></mat-grid-tile>
+</mat-grid-list> -->
