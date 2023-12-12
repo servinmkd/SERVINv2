@@ -7,6 +7,7 @@ import {
   ViewChild,
 } from '@angular/core';
 import { MatDrawer } from '@angular/material/sidenav';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -16,7 +17,7 @@ import { MatDrawer } from '@angular/material/sidenav';
 export class HeaderComponent implements OnInit {
   showFiller = false;
   searchTerm: string = '';
-  constructor() {}
+  constructor(private router: Router) {}
 
   @Input('drawer') drawer: any;
 
@@ -28,7 +29,7 @@ export class HeaderComponent implements OnInit {
 
     if (this.showFiller) {
       (document.getElementById('toggle-btn')! as any).style =
-        'margin-left:170px';
+        'margin-left:200px';
     } else
       (document.getElementById('toggle-btn')! as any).style = 'margin-left:0px';
   }
@@ -37,5 +38,9 @@ export class HeaderComponent implements OnInit {
 
   onSearch() {
     this.searchEvent.emit(this.searchTerm);
+  }
+
+  gotoHome() {
+    this.router.navigate(['']);
   }
 }

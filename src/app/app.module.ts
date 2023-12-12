@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DashbordComponent } from './dashbord/dashbord.component';
+// import { DashbordComponent } from './dashbord/dashbord.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -15,15 +15,25 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatGridListModule } from '@angular/material/grid-list';
-import { SearchBarComponent } from './search-bar/search-bar.component';
+import * as firebase from 'firebase/app';
+import { environment } from 'src/environments/environment';
+import { getFirestore } from 'firebase/firestore';
+import { initializeApp } from 'firebase/app';
 
+// import { TestpageComponent } from './testpage/testpage.component';
+
+// firebase.initializeApp(environment.firebase);
+const app = initializeApp(environment.firebase);
+export const firestore = getFirestore(app);
 @NgModule({
   declarations: [
     AppComponent,
-    DashbordComponent,
+    // DashbordComponent,
+    routingComponents,
     SidebarComponent,
     HeaderComponent,
-    SearchBarComponent,
+
+    // TestpageComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,6 +47,8 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
     MatTreeModule,
     MatSidenavModule,
     MatGridListModule,
+
+    // AngularFireModule.initializeApp(environment.firebase),
   ],
   providers: [],
   bootstrap: [AppComponent],

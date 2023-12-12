@@ -1,7 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { TestpageComponent } from './testpage/testpage.component';
+import { DashbordComponent } from './dashbord/dashbord.component';
 
 const routes: Routes = [
+  { path: '', component: DashbordComponent },
+  { path: 'Test', component: TestpageComponent },
+  { path: 'Home', component: DashbordComponent },
   // {
   //   path: 'dashboard',
   //   loadChildren: () =>
@@ -15,3 +20,4 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
+export const routingComponents = [TestpageComponent, DashbordComponent];

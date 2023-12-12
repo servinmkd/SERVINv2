@@ -5,6 +5,7 @@
       class="custom-image"
       alt="Image Description"
     />
+
     <div class="btnOffer">
       <button class="primary-cubutton btn" mat-flat-button>
         <div>Offers</div>
@@ -13,10 +14,10 @@
       <button mat-flat-button class="secondry-cubutton btn">Products</button>
     </div>
 
-    <div class="search-container">
-      <input type="text" placeholder="Search..." (input)="onSearch()" />
-      <button mat-icon-button aria-label="Example icon-button with menu icon">
-        <mat-icon>search</mat-icon>
+    <div class="searchBox">
+      <input class="searchInput" type="text" name="" placeholder="Search" />
+      <button class="searchButton" href="#">
+        <i class="material-icons"> search </i>
       </button>
     </div>
   </mat-toolbar-row>
@@ -34,6 +35,7 @@
       </ng-template>
     </button>
     <div class="header-routs">
+      <button (click)="gotoHome()" mat-button>Home</button>
       <button mat-button>All offers</button>
       <button mat-button>Supermarket</button>
       <button mat-button>Home & Tools</button>
@@ -42,6 +44,7 @@
       <button mat-button>Cafe & Restaurants</button>
       <button mat-button>Others</button>
     </div>
+
     <div></div>
 
     <button
@@ -53,6 +56,9 @@
       <mat-icon>more_vert</mat-icon>
     </button>
     <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="gotoHome()">
+        <mat-icon>home</mat-icon> <span>Home</span>
+      </button>
       <button mat-menu-item>
         <mat-icon>shopping_cart</mat-icon> <span>All offers</span>
       </button>

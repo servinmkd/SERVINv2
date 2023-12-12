@@ -83,13 +83,13 @@ interface ExampleFlatNode {
 })
 export class SidebarComponent implements OnInit {
   showFiller = true;
-
   @Input('drawer') drawer: any;
   constructor() {
     this.dataSource.data = TREE_DATA;
   }
 
   ngOnInit(): void {}
+
   private sidebarVisible = new BehaviorSubject<boolean>(true);
   sidebarVisible$ = this.sidebarVisible.asObservable();
   toggle() {
